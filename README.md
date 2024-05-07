@@ -30,13 +30,12 @@ LINK SWAGGER: http://localhost:8080/swagger-ui/index.html#/
 
 ENDPOINTS DA CLASSE EMPRESA:
 - POST http://localhost:8080/empresas
+- POST http://localhost:8080/empresas/cadastrar-campanha/{id}
 - DELETE http://localhost:8080/empresas/{id}
 
 ENDPOINTS DA CLASSE INFLUENCER:
 - POST http://localhost:8080/influencers
 
-ENDPOINTS DA CLASSE CAMPANHA:
-- POST http://localhost:8080/campanhas
 
 ## ANEXOS
 ACESSO AO PITCH:
