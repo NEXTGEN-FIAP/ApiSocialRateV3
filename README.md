@@ -25,7 +25,9 @@ RESPONSABILIDADES DE CADA MEMBRO:
 ## ARQUITETURA DO PROJETO
 ![image](https://github.com/RickMaverick/apiSocialRate_v2/assets/122487111/c06ea351-7e33-489c-b488-f1e2f6b495dc)
 
-## ENDPOINTS DA API
+## ENDPOINTS E DOCUMENTACAO DA API
+LINK SWAGGER: http://localhost:8080/swagger-ui/index.html#/
+
 ENDPOINTS DA CLASSE EMPRESA:
 - POST http://localhost:8080/empresas
 - DELETE http://localhost:8080/empresas/{id}
