@@ -1,9 +1,7 @@
 package com.example.ApiSocialRateV3.model;
 
 import com.example.ApiSocialRateV3.controller.dto.CampanhaDTO;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -17,6 +15,10 @@ public class Campanha {
     private String interessesDoPublico;
     private String canalDaCampanha;
     private String alcanceDaCampanha;
+    @ManyToOne
+    @JoinColumn(name = "empresa_id")
+    private Empresa empresa;
+
 
     // Construtor vazio
     public Campanha() {

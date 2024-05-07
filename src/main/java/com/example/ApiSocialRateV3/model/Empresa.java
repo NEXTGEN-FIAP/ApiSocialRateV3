@@ -33,4 +33,9 @@ public class Empresa {
     public Empresa(){
 
     }
+
+    //Metodo para adicionar Campanhas
+    public void adicionarCampanha(Campanha campanha){
+        campanhas.add(campanha);
+    }
 }
