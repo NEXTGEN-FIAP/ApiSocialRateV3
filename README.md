@@ -38,6 +38,12 @@ ENDPOINTS DA CLASSE INFLUENCER:
 
 
 ## ANEXOS
+
+CSV DE TREINAMENTO DA IA: Social Rate.csv
+
+MODELO TREINADO DA IA: 'modelo_match_influencer.pkl'
+
+
 ACESSO AO PITCH:
 - https://www.youtube.com/watch?v=5DyYL7Z3cz0
 
