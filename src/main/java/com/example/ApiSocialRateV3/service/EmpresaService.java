@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -49,5 +50,16 @@ public class EmpresaService {
 
     public void deletarEmpresaPorId(Long id){
         empresaRepository.deleteById(id);
+    }
+
+    public List<Campanha> listarCampanhasPorIdEmpresa(Long id) {
+        Optional<Empresa> optionalEmpresa = empresaRepository.findById(id);
+        if (optionalEmpresa.isPresent()) {
+            Empresa empresa = optionalEmpresa.get();
+            List<Campanha> campanhas = empresa.getCampanhas();
+            return campanhas;
+        } else {
+            throw new IllegalArgumentException("Nao foi possivel localiza a empresa com ID: " + id);
+        }
     }
 }

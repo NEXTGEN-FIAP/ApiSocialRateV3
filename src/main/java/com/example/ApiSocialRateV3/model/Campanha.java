@@ -1,6 +1,7 @@
 package com.example.ApiSocialRateV3.model;
 
 import com.example.ApiSocialRateV3.controller.dto.CampanhaDTO;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,6 +18,7 @@ public class Campanha {
     private String alcanceDaCampanha;
     @ManyToOne
     @JoinColumn(name = "empresa_id")
+    @JsonIgnore
     private Empresa empresa;
 
 

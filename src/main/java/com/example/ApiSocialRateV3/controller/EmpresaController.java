@@ -9,11 +9,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/empresas")
 public class EmpresaController {
     @Autowired
     private EmpresaService empresaService;
+
+    @GetMapping("/campanhas/{id}")
+    public ResponseEntity<List<Campanha>> getCampanhas(@PathVariable Long id){
+        return ResponseEntity.ok(empresaService.listarCampanhasPorIdEmpresa(id));
+    }
 
     @PostMapping
     public ResponseEntity<Empresa> postEmpresa(@RequestBody EmpresaDTO empresaDTO){
