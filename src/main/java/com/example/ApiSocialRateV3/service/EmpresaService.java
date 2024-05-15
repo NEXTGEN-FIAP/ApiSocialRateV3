@@ -62,4 +62,14 @@ public class EmpresaService {
             throw new IllegalArgumentException("Nao foi possivel localiza a empresa com ID: " + id);
         }
     }
+
+    public Empresa listarEmpresaPeloID(Long idEmpresa) {
+        Optional<Empresa> optionalEmpresa = empresaRepository.findById(idEmpresa);
+        if (optionalEmpresa.isPresent()) {
+            Empresa empresa = optionalEmpresa.get();
+            return empresa;
+        } else {
+            throw new IllegalArgumentException("Nao foi possivel localiza a empresa com ID: " + idEmpresa);
+        }
+    }
 }

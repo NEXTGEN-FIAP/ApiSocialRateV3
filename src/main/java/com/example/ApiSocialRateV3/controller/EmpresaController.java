@@ -17,6 +17,11 @@ public class EmpresaController {
     @Autowired
     private EmpresaService empresaService;
 
+    @GetMapping("/{idEmpresa}")
+    public ResponseEntity<Empresa> getEmpresaPeloId(@PathVariable Long idEmpresa){
+        return ResponseEntity.ok(empresaService.listarEmpresaPeloID(idEmpresa));
+    }
+
     @GetMapping("/campanhas/{id}")
     public ResponseEntity<List<Campanha>> getCampanhas(@PathVariable Long id){
         return ResponseEntity.ok(empresaService.listarCampanhasPorIdEmpresa(id));
