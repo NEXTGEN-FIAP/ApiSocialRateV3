@@ -1,4 +1,4 @@
-[Lista_Campanhas_pelo_ID_da_Empresa-1715816059540.json](https://github.com/NEXTGEN-FIAP/ApiSocialRateV3/files/15327829/Lista_Campanhas_pelo_ID_da_Empresa-1715816059540.json)# SOCIAL RATE
+# SOCIAL RATE
 
 ## INTEGRANTES DO GRUPO:
 
@@ -56,7 +56,7 @@ MODELO TREINADO DA IA: 'modelo_match_influencer.pkl'
 ACESSO AO PITCH:
 - https://www.youtube.com/watch?v=5DyYL7Z3cz0
 
-##JSONS PARA TESTE:
+## JSONS PARA TESTE:
 ### Cadastrando 1 Empresa:
 http://localhost:8080/empresas
 - {
