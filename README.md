@@ -38,7 +38,7 @@ ENDPOINTS DA CLASSE EMPRESA:
 ENDPOINTS DA CLASSE INFLUENCER:
 - POST http://localhost:8080/influencers
 
-ENDPOINTS DA CLASSE CAMAPANHAS:
+ENDPOINTS DA CLASSE CAMPANHAS:
 - GET http://localhost:8080/campanhas/{idCampanha}
 
 ENDPOINT DA API COM MODELO DE PREDICAO:
@@ -56,7 +56,7 @@ MODELO TREINADO DA IA: 'modelo_match_influencer.pkl'
 ACESSO AO PITCH:
 - https://www.youtube.com/watch?v=5DyYL7Z3cz0
 
-JSONS PARA TESTE:
+##JSONS PARA TESTE:
 ### Cadastrando 1 Empresa:
 http://localhost:8080/empresas
 - {
