@@ -1,4 +1,4 @@
-# SOCIAL RATE
+[Lista_Campanhas_pelo_ID_da_Empresa-1715816059540.json](https://github.com/NEXTGEN-FIAP/ApiSocialRateV3/files/15327829/Lista_Campanhas_pelo_ID_da_Empresa-1715816059540.json)# SOCIAL RATE
 
 ## INTEGRANTES DO GRUPO:
 
@@ -29,6 +29,8 @@ RESPONSABILIDADES DE CADA MEMBRO:
 LINK SWAGGER: http://localhost:8080/swagger-ui/index.html#/
 
 ENDPOINTS DA CLASSE EMPRESA:
+- GET  http://localhost:8080/empresas/campanhas/{id}
+- GET  http://localhost:8080/empresas/{idEmpresa}
 - POST http://localhost:8080/empresas
 - POST http://localhost:8080/empresas/cadastrar-campanha/{id}
 - DELETE http://localhost:8080/empresas/{id}
@@ -36,6 +38,13 @@ ENDPOINTS DA CLASSE EMPRESA:
 ENDPOINTS DA CLASSE INFLUENCER:
 - POST http://localhost:8080/influencers
 
+ENDPOINTS DA CLASSE CAMAPANHAS:
+- GET http://localhost:8080/campanhas/{idCampanha}
+
+ENDPOINT DA API COM MODELO DE PREDICAO:
+- GET http://localhost:8080/predicao/{idEmpresa}/{idCampanha}
+- obs: para utilizar esse endpoint, é necessario que o projeto da API externa esteja rodando.
+- obs2: após clonar o projeto e instalar as dependencias, utilize o comando "uvicorn main:app"
 
 ## ANEXOS
 
@@ -49,6 +58,7 @@ ACESSO AO PITCH:
 
 JSONS PARA TESTE:
 ### Cadastrando 1 Empresa:
+http://localhost:8080/empresas
 - {
 	"nome": "Toyota",
 	"email": "comercial.toyota.brasil@toyota.com.br",
@@ -56,6 +66,7 @@ JSONS PARA TESTE:
 }
 
 ### Cadastrando 1 Influencer:
+http://localhost:8080/influencers
 - {
 	"nome": "Ana Maria Braga",
 	"areaAtuacao": "Apresentadora",
@@ -65,11 +76,33 @@ JSONS PARA TESTE:
 	"generoInfluencer": "Mulher"
 }
 
-### Cadastrando 1 Campanha:
+### Cadastrando 1 Campanha para a Empresa pelo id da empresa:
+http://localhost:8080/empresas/cadastrar-campanha/{idEmpresa}
 - {
 	"publicoAlvo": "Adultos",
 	"generoPublivoAlvo": "Misto",
 	"interessesDoPublico": "Viagens",
 	"canalDaCampanha": "Televisao",
 	"alcanceDaCampanha": "Nacional"
+}
+
+### Listando as Campanhas cadastradas de uma empresa:
+http://localhost:8080/empresas/campanhas/{idEmpresa}
+- exemplo de response:
+  [
+	{
+		"id": 1,
+		"publicoAlvo": "Adultos",
+		"generoPublivoAlvo": "Misto",
+		"interessesDoPublico": "Viagens",
+		"canalDaCampanha": "Televisao",
+		"alcanceDaCampanha": "Nacional"
+	}
+]
+
+### Usar modelo de predicão de melhor influencer para a Campanha:
+http://localhost:8080/predicao/{idEmpresa}/{idCampanha}
+- exemplo de response:
+  {
+	"message": "['Casimiro']"
 }
