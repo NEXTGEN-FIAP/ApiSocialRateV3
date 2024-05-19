@@ -54,7 +54,7 @@ MODELO TREINADO DA IA: 'modelo_match_influencer.pkl'
 
 
 ACESSO AO PITCH:
-- https://www.youtube.com/watch?v=5DyYL7Z3cz0
+- https://youtu.be/fZUDbFQM9Kw
 
 ## JSONS PARA TESTE:
 ### Cadastrando 1 Empresa:
