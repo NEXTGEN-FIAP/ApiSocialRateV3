@@ -43,7 +43,7 @@ ENDPOINTS DA CLASSE CAMPANHAS:
 
 ENDPOINT DA API COM MODELO DE PREDICAO:
 - GET http://localhost:8080/predicao/{idEmpresa}/{idCampanha}
-- obs: para utilizar esse endpoint, é necessario que o projeto da API externa esteja rodando.
+- obs: para utilizar esse endpoint, é necessario que o projeto da API externa esteja rodando. Link do repositorio: https://github.com/NEXTGEN-FIAP/ApiPredicaoSocialRateV1
 - obs2: após clonar o projeto e instalar as dependencias, utilize o comando "uvicorn main:app"
 
 ## ANEXOS
